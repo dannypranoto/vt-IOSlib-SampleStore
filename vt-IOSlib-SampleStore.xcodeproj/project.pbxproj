@@ -14,6 +14,17 @@
 		ED00F0DF1C58743600D70CCC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED00F0DD1C58743600D70CCC /* LaunchScreen.storyboard */; };
 		ED00F0EA1C58743600D70CCC /* vt_IOSlib_SampleStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED00F0E91C58743600D70CCC /* vt_IOSlib_SampleStoreTests.swift */; };
 		ED00F0F51C58743600D70CCC /* vt_IOSlib_SampleStoreUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED00F0F41C58743600D70CCC /* vt_IOSlib_SampleStoreUITests.swift */; };
+		ED00F11A1C5874D200D70CCC /* VTAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = ED00F1041C5874D200D70CCC /* VTAddress.m */; };
+		ED00F11B1C5874D200D70CCC /* VTBaseTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = ED00F1061C5874D200D70CCC /* VTBaseTransaction.m */; };
+		ED00F11C1C5874D200D70CCC /* VTBaseTransactionMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = ED00F1081C5874D200D70CCC /* VTBaseTransactionMethod.m */; };
+		ED00F11D1C5874D200D70CCC /* VTCardDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = ED00F10A1C5874D200D70CCC /* VTCardDetails.m */; };
+		ED00F11E1C5874D200D70CCC /* VTConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = ED00F10C1C5874D200D70CCC /* VTConfig.m */; };
+		ED00F11F1C5874D200D70CCC /* VTCustomerDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = ED00F10E1C5874D200D70CCC /* VTCustomerDetails.m */; };
+		ED00F1201C5874D200D70CCC /* VTDirect.m in Sources */ = {isa = PBXBuildFile; fileRef = ED00F1101C5874D200D70CCC /* VTDirect.m */; };
+		ED00F1211C5874D200D70CCC /* VTiOSAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = ED00F1131C5874D200D70CCC /* VTiOSAPI.m */; };
+		ED00F1221C5874D200D70CCC /* VTItemDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = ED00F1151C5874D200D70CCC /* VTItemDetails.m */; };
+		ED00F1231C5874D200D70CCC /* VTToken.m in Sources */ = {isa = PBXBuildFile; fileRef = ED00F1171C5874D200D70CCC /* VTToken.m */; };
+		ED00F1241C5874D200D70CCC /* VTTransactionDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = ED00F1191C5874D200D70CCC /* VTTransactionDetails.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +58,29 @@
 		ED00F0F01C58743600D70CCC /* vt-IOSlib-SampleStoreUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "vt-IOSlib-SampleStoreUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED00F0F41C58743600D70CCC /* vt_IOSlib_SampleStoreUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vt_IOSlib_SampleStoreUITests.swift; sourceTree = "<group>"; };
 		ED00F0F61C58743600D70CCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED00F1031C5874D200D70CCC /* VTAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VTAddress.h; path = lib/VTAddress.h; sourceTree = "<group>"; };
+		ED00F1041C5874D200D70CCC /* VTAddress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VTAddress.m; path = lib/VTAddress.m; sourceTree = "<group>"; };
+		ED00F1051C5874D200D70CCC /* VTBaseTransaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VTBaseTransaction.h; path = lib/VTBaseTransaction.h; sourceTree = "<group>"; };
+		ED00F1061C5874D200D70CCC /* VTBaseTransaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VTBaseTransaction.m; path = lib/VTBaseTransaction.m; sourceTree = "<group>"; };
+		ED00F1071C5874D200D70CCC /* VTBaseTransactionMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VTBaseTransactionMethod.h; path = lib/VTBaseTransactionMethod.h; sourceTree = "<group>"; };
+		ED00F1081C5874D200D70CCC /* VTBaseTransactionMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VTBaseTransactionMethod.m; path = lib/VTBaseTransactionMethod.m; sourceTree = "<group>"; };
+		ED00F1091C5874D200D70CCC /* VTCardDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VTCardDetails.h; path = lib/VTCardDetails.h; sourceTree = "<group>"; };
+		ED00F10A1C5874D200D70CCC /* VTCardDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VTCardDetails.m; path = lib/VTCardDetails.m; sourceTree = "<group>"; };
+		ED00F10B1C5874D200D70CCC /* VTConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VTConfig.h; path = lib/VTConfig.h; sourceTree = "<group>"; };
+		ED00F10C1C5874D200D70CCC /* VTConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VTConfig.m; path = lib/VTConfig.m; sourceTree = "<group>"; };
+		ED00F10D1C5874D200D70CCC /* VTCustomerDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VTCustomerDetails.h; path = lib/VTCustomerDetails.h; sourceTree = "<group>"; };
+		ED00F10E1C5874D200D70CCC /* VTCustomerDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VTCustomerDetails.m; path = lib/VTCustomerDetails.m; sourceTree = "<group>"; };
+		ED00F10F1C5874D200D70CCC /* VTDirect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VTDirect.h; path = lib/VTDirect.h; sourceTree = "<group>"; };
+		ED00F1101C5874D200D70CCC /* VTDirect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VTDirect.m; path = lib/VTDirect.m; sourceTree = "<group>"; };
+		ED00F1111C5874D200D70CCC /* VTiOSAPI-BridgingHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "VTiOSAPI-BridgingHeader.h"; path = "lib/VTiOSAPI-BridgingHeader.h"; sourceTree = "<group>"; };
+		ED00F1121C5874D200D70CCC /* VTiOSAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VTiOSAPI.h; path = lib/VTiOSAPI.h; sourceTree = "<group>"; };
+		ED00F1131C5874D200D70CCC /* VTiOSAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VTiOSAPI.m; path = lib/VTiOSAPI.m; sourceTree = "<group>"; };
+		ED00F1141C5874D200D70CCC /* VTItemDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VTItemDetails.h; path = lib/VTItemDetails.h; sourceTree = "<group>"; };
+		ED00F1151C5874D200D70CCC /* VTItemDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VTItemDetails.m; path = lib/VTItemDetails.m; sourceTree = "<group>"; };
+		ED00F1161C5874D200D70CCC /* VTToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VTToken.h; path = lib/VTToken.h; sourceTree = "<group>"; };
+		ED00F1171C5874D200D70CCC /* VTToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VTToken.m; path = lib/VTToken.m; sourceTree = "<group>"; };
+		ED00F1181C5874D200D70CCC /* VTTransactionDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VTTransactionDetails.h; path = lib/VTTransactionDetails.h; sourceTree = "<group>"; };
+		ED00F1191C5874D200D70CCC /* VTTransactionDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VTTransactionDetails.m; path = lib/VTTransactionDetails.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +111,7 @@
 		ED00F0C81C58743600D70CCC = {
 			isa = PBXGroup;
 			children = (
+				ED00F1021C5874C000D70CCC /* lib */,
 				ED00F0D31C58743600D70CCC /* vt-IOSlib-SampleStore */,
 				ED00F0E81C58743600D70CCC /* vt-IOSlib-SampleStoreTests */,
 				ED00F0F31C58743600D70CCC /* vt-IOSlib-SampleStoreUITests */,
@@ -123,6 +158,36 @@
 				ED00F0F61C58743600D70CCC /* Info.plist */,
 			);
 			path = "vt-IOSlib-SampleStoreUITests";
+			sourceTree = "<group>";
+		};
+		ED00F1021C5874C000D70CCC /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				ED00F1031C5874D200D70CCC /* VTAddress.h */,
+				ED00F1041C5874D200D70CCC /* VTAddress.m */,
+				ED00F1051C5874D200D70CCC /* VTBaseTransaction.h */,
+				ED00F1061C5874D200D70CCC /* VTBaseTransaction.m */,
+				ED00F1071C5874D200D70CCC /* VTBaseTransactionMethod.h */,
+				ED00F1081C5874D200D70CCC /* VTBaseTransactionMethod.m */,
+				ED00F1091C5874D200D70CCC /* VTCardDetails.h */,
+				ED00F10A1C5874D200D70CCC /* VTCardDetails.m */,
+				ED00F10B1C5874D200D70CCC /* VTConfig.h */,
+				ED00F10C1C5874D200D70CCC /* VTConfig.m */,
+				ED00F10D1C5874D200D70CCC /* VTCustomerDetails.h */,
+				ED00F10E1C5874D200D70CCC /* VTCustomerDetails.m */,
+				ED00F10F1C5874D200D70CCC /* VTDirect.h */,
+				ED00F1101C5874D200D70CCC /* VTDirect.m */,
+				ED00F1111C5874D200D70CCC /* VTiOSAPI-BridgingHeader.h */,
+				ED00F1121C5874D200D70CCC /* VTiOSAPI.h */,
+				ED00F1131C5874D200D70CCC /* VTiOSAPI.m */,
+				ED00F1141C5874D200D70CCC /* VTItemDetails.h */,
+				ED00F1151C5874D200D70CCC /* VTItemDetails.m */,
+				ED00F1161C5874D200D70CCC /* VTToken.h */,
+				ED00F1171C5874D200D70CCC /* VTToken.m */,
+				ED00F1181C5874D200D70CCC /* VTTransactionDetails.h */,
+				ED00F1191C5874D200D70CCC /* VTTransactionDetails.m */,
+			);
+			name = lib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,8 +320,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED00F1241C5874D200D70CCC /* VTTransactionDetails.m in Sources */,
+				ED00F1211C5874D200D70CCC /* VTiOSAPI.m in Sources */,
+				ED00F11F1C5874D200D70CCC /* VTCustomerDetails.m in Sources */,
+				ED00F1201C5874D200D70CCC /* VTDirect.m in Sources */,
+				ED00F11D1C5874D200D70CCC /* VTCardDetails.m in Sources */,
 				ED00F0D71C58743600D70CCC /* ViewController.swift in Sources */,
+				ED00F11E1C5874D200D70CCC /* VTConfig.m in Sources */,
+				ED00F11B1C5874D200D70CCC /* VTBaseTransaction.m in Sources */,
+				ED00F11C1C5874D200D70CCC /* VTBaseTransactionMethod.m in Sources */,
+				ED00F11A1C5874D200D70CCC /* VTAddress.m in Sources */,
 				ED00F0D51C58743600D70CCC /* AppDelegate.swift in Sources */,
+				ED00F1221C5874D200D70CCC /* VTItemDetails.m in Sources */,
+				ED00F1231C5874D200D70CCC /* VTToken.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,10 +474,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "vt-IOSlib-SampleStore/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "veritrans.vt-IOSlib-SampleStore";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "lib/VTiOSAPI-BridgingHeader.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -409,10 +488,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "vt-IOSlib-SampleStore/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "veritrans.vt-IOSlib-SampleStore";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "lib/VTiOSAPI-BridgingHeader.h";
 			};
 			name = Release;
 		};
