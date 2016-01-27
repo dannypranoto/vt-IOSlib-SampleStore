@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C72D13331C58A2850030B2CF /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72D13321C58A2850030B2CF /* SwiftyJSON.swift */; };
 		ED00F0D51C58743600D70CCC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED00F0D41C58743600D70CCC /* AppDelegate.swift */; };
 		ED00F0D71C58743600D70CCC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED00F0D61C58743600D70CCC /* ViewController.swift */; };
 		ED00F0DA1C58743600D70CCC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED00F0D81C58743600D70CCC /* Main.storyboard */; };
@@ -45,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C72D13321C58A2850030B2CF /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		ED00F0D11C58743600D70CCC /* vt-IOSlib-SampleStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "vt-IOSlib-SampleStore.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED00F0D41C58743600D70CCC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ED00F0D61C58743600D70CCC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 				ED00F0E81C58743600D70CCC /* vt-IOSlib-SampleStoreTests */,
 				ED00F0F31C58743600D70CCC /* vt-IOSlib-SampleStoreUITests */,
 				ED00F0D21C58743600D70CCC /* Products */,
+				C72D13321C58A2850030B2CF /* SwiftyJSON.swift */,
 			);
 			sourceTree = "<group>";
 		};
@@ -325,6 +328,7 @@
 				ED00F11F1C5874D200D70CCC /* VTCustomerDetails.m in Sources */,
 				ED00F1201C5874D200D70CCC /* VTDirect.m in Sources */,
 				ED00F11D1C5874D200D70CCC /* VTCardDetails.m in Sources */,
+				C72D13331C58A2850030B2CF /* SwiftyJSON.swift in Sources */,
 				ED00F0D71C58743600D70CCC /* ViewController.swift in Sources */,
 				ED00F11E1C5874D200D70CCC /* VTConfig.m in Sources */,
 				ED00F11B1C5874D200D70CCC /* VTBaseTransaction.m in Sources */,
@@ -564,6 +568,7 @@
 				ED00F0FB1C58743600D70CCC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		ED00F0FC1C58743600D70CCC /* Build configuration list for PBXNativeTarget "vt-IOSlib-SampleStoreTests" */ = {
 			isa = XCConfigurationList;
@@ -572,6 +577,7 @@
 				ED00F0FE1C58743600D70CCC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		ED00F0FF1C58743600D70CCC /* Build configuration list for PBXNativeTarget "vt-IOSlib-SampleStoreUITests" */ = {
 			isa = XCConfigurationList;
@@ -580,6 +586,7 @@
 				ED00F1011C58743600D70CCC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
