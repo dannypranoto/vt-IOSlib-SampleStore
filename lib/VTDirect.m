@@ -27,7 +27,7 @@
     [NSException raise:UnsupportedMethodException format:@"Method Not Implemented Yet"];
 }
 
--(void)getToken:(void (^)(VTToken *, NSException *))completionHandler{
+-(void)getToken:(void (^)(NSData *, NSException *))completionHandler{
     NSString* urlString = [NSString stringWithFormat:@"%@%@",[VTConfig getTokenUrl],[_card_details getParamUrl]];
     NSURL *url = [NSURL URLWithString:urlString];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
@@ -35,16 +35,8 @@
         if(data.length > 0 && connectionError == nil){
             NSLog(@"Data: %@",[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
             NSError * error;
-            NSDictionary* jsonParsed = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&error];
             if(error == nil){
-                VTToken* token = [[VTToken alloc]init];
-                token.token_id = [jsonParsed objectForKey:@"token_id"];
-                token.status_code = [jsonParsed objectForKey:@"status_code"];
-                token.status_message = [jsonParsed objectForKey:@"status_message"];
-                token.redirect_url = [jsonParsed objectForKey:@"redirect_url"];
-                
-                token.bank = [jsonParsed objectForKey:@"bank"];
-                completionHandler(token,nil);
+                completionHandler(data,nil);
             }else{
                 NSException* exception = [[NSException alloc] initWithName:@"JsonParsedException" reason:error.localizedDescription userInfo:error.userInfo];
                 completionHandler(nil,exception);
@@ -67,14 +59,7 @@
         if(data.length > 0 && connectionError == nil){
             NSLog(@"Data: %@",[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
             NSError * error;
-//            NSDictionary* jsonParsed = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&error];
             if(error == nil){
-//                VTSavedToken* savedToken = [[VTSavedToken alloc]init];
-//                savedToken.status_code = [jsonParsed objectForKey:@"status_code"];
-//                savedToken.transaction_id = [jsonParsed objectForKey:@"transaction_id"];
-//                savedToken.saved_token_id = [jsonParsed objectForKey:@"saved_token_id"];
-//                savedToken.masked_card = [jsonParsed objectForKey:@"masked_card"];
-                
                 completionHandler(data,nil);
             }else{
                 NSException* exception = [[NSException alloc] initWithName:@"JsonParsedException" reason:error.localizedDescription userInfo:error.userInfo];
@@ -88,7 +73,6 @@
             
         }
     }];
-
 }
 
 @end
