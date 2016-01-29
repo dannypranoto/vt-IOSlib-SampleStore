@@ -13,7 +13,6 @@
 
 #import <Foundation/Foundation.h>
 #import "VTBaseTransaction.h"
-#import "VTToken.h"
 
 @interface VTBaseTransactionMethod : NSObject
 
@@ -22,9 +21,8 @@
 -(void)preAuthorize;
 -(void)capture;
 -(void)charge;
--(void) getToken:(void(^)(VTToken* token, NSException* exception)) completionHandler;
--(void) registerCard:(void(^)(NSData* savedToken, NSException* exception)) completionHandler;
-
+-(void)getToken:(void(^)(NSData* token, NSException* exception)) completionHandler;
+-(void)registerCard:(void(^)(NSData* savedToken, NSException* exception)) completionHandler;
 @end
 
 

@@ -14,7 +14,7 @@ class ViewController: UIViewController, UIWebViewDelegate {
     let totalPrice = "10000"
     let vtDirect = VTDirect()
     let cardDetails = VTCardDetails()
-    var token: VTToken?
+    var jsonData: JSON = []
     
     @IBOutlet weak var creditCardNumber: UITextField!
     @IBOutlet weak var expMonth: UITextField!
@@ -22,6 +22,9 @@ class ViewController: UIViewController, UIWebViewDelegate {
     @IBOutlet weak var cvv: UITextField!
     
     override func viewDidLoad() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        view.addGestureRecognizer(tap)
+        
         // initialize client_key and veritrans environment
         VTConfig.setCLIENT_KEY(clientKey)
         VTConfig.setVT_IsProduction(false)
@@ -31,13 +34,13 @@ class ViewController: UIViewController, UIWebViewDelegate {
         // get token and charge transaction
         acquiredCardDetails()
         vtDirect.card_details = cardDetails
-        vtDirect.getToken{(token, exception) -> Void in
-            if let vtToken: VTToken = token {
-                self.token = token
-                if vtToken.redirect_url != nil {
+        vtDirect.getToken{(data, exception) -> Void in
+            if let jsonData: JSON = JSON(data: data) {
+                self.jsonData = jsonData
+                if jsonData["redirect_url"] != nil {
                     //Displaying redirect url in Web View - 3DS
                     let webView:UIWebView = UIWebView(frame: CGRectMake(0, 10, 320, 320))
-                    webView.loadRequest(NSURLRequest(URL: NSURL(string:token.redirect_url)!))
+                    webView.loadRequest(NSURLRequest(URL: NSURL(string: jsonData["redirect_url"].stringValue)!))
                     webView.delegate = self
                     webView.scalesPageToFit = true;
                     webView.multipleTouchEnabled = false;
@@ -46,7 +49,7 @@ class ViewController: UIViewController, UIWebViewDelegate {
                 }
                 else {
                     //charge transaction - non 3DS
-                    self.chargeRequest("token-id=\(vtToken.token_id)")
+                    self.chargeRequest("token-id=\(jsonData["token_id"].stringValue)")
                 }
             } else {
                 print("Unable to retrieve token")
@@ -66,7 +69,7 @@ class ViewController: UIViewController, UIWebViewDelegate {
     func acquiredCardDetails() {
         // retrieve all user's credit card information from user interface and assign to cardDetails object
         cardDetails.card_number = creditCardNumber.text
-        cardDetails.card_exp_month = Int(expMonth.text!)!
+        cardDetails.card_exp_month = expMonth.text
         cardDetails.card_exp_year = Int(expYear.text!)!
         cardDetails.card_cvv = cvv.text
         cardDetails.gross_amount = totalPrice
@@ -95,7 +98,7 @@ class ViewController: UIViewController, UIWebViewDelegate {
         // charge transaction after user has successfully authenticated by 3D Secure
         if(webView.request?.URL!.absoluteString.rangeOfString("callback") != nil){
             webView.removeFromSuperview()
-            let bodyData = "token-id=\(self.token!.token_id)&price=\(totalPrice)"
+            let bodyData = "token-id=\(self.jsonData["token_id"].stringValue)&price=\(totalPrice)"
             chargeRequest(bodyData)
         }
     }
@@ -130,6 +133,10 @@ class ViewController: UIViewController, UIWebViewDelegate {
         request.HTTPBody = bodyData.dataUsingEncoding(NSUTF8StringEncoding)
         request.addValue("application/json", forHTTPHeaderField: "Accept")
         return request
+    }
+    
+    func dismissKeyboard() {
+        view.endEditing(true)
     }
 }
 

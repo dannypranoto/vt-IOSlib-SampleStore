@@ -24,7 +24,7 @@
 
 -(NSString*) getParamUrl{
     
-    return [NSString stringWithFormat:@"?card_number=%@&card_exp_month=%ld&card_exp_year=%ld&card_cvv=%@&client_key=%@&secure=%@%@&gross_amount=%@",_card_number,_card_exp_month,_card_exp_year,_card_cvv,VTConfig.CLIENT_KEY,_secure ? @"true" : @"false",[self getBankParam],_gross_amount];
+    return [NSString stringWithFormat:@"?card_number=%@&card_exp_month=%@&card_exp_year=%ld&card_cvv=%@&client_key=%@&secure=%@%@&gross_amount=%@",_card_number,_card_exp_month,_card_exp_year,_card_cvv,VTConfig.CLIENT_KEY,_secure ? @"true" : @"false",[self getBankParam],_gross_amount];
 }
 
 -(NSString*) getBankParam{
