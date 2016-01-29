@@ -20,11 +20,17 @@
 @synthesize card_exp_month = _card_exp_month;
 @synthesize card_exp_year = _card_exp_year;
 
+@synthesize token_id = _token_id;
+@synthesize two_click = _two_click;
+
 @synthesize secure = _secure;
 
--(NSString*) getParamUrl{
-    
-    return [NSString stringWithFormat:@"?card_number=%@&card_exp_month=%@&card_exp_year=%ld&card_cvv=%@&client_key=%@&secure=%@%@&gross_amount=%@",_card_number,_card_exp_month,_card_exp_year,_card_cvv,VTConfig.CLIENT_KEY,_secure ? @"true" : @"false",[self getBankParam],_gross_amount];
+-(NSString*) getParamUrl:(BOOL)isTwoClick {
+    if (isTwoClick) {
+        return [NSString stringWithFormat:@"?token_id=%@&two_click=%@&card_cvv=%@&client_key=%@&secure=%@%@&gross_amount=%@",_token_id,_two_click ? @"true" : @"false",_card_cvv,VTConfig.CLIENT_KEY,_secure ? @"true" : @"false",[self getBankParam],_gross_amount];
+    } else {
+        return [NSString stringWithFormat:@"?card_number=%@&card_exp_month=%@&card_exp_year=%d&card_cvv=%@&client_key=%@&secure=%@%@&gross_amount=%@",_card_number,_card_exp_month,_card_exp_year,_card_cvv,VTConfig.CLIENT_KEY,_secure ? @"true" : @"false",[self getBankParam],_gross_amount];
+    }
 }
 
 -(NSString*) getBankParam{

@@ -28,7 +28,8 @@
 }
 
 -(void)getToken:(void (^)(NSData *, NSException *))completionHandler{
-    NSString* urlString = [NSString stringWithFormat:@"%@%@",[VTConfig getTokenUrl],[_card_details getParamUrl]];
+    NSString* urlString = [NSString stringWithFormat:@"%@%@",[VTConfig getTokenUrl],[_card_details getParamUrl:_card_details.two_click]];
+
     NSURL *url = [NSURL URLWithString:urlString];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
@@ -52,7 +53,7 @@
 }
 
 -(void)registerCard:(void (^)(NSData *, NSException *))completionHandler{
-    NSString* urlString = [NSString stringWithFormat:@"%@%@",[VTConfig getRegisterCardUrl],[_card_details getParamUrl]];
+    NSString* urlString = [NSString stringWithFormat:@"%@%@",[VTConfig getRegisterCardUrl],[_card_details getParamUrl:false]];
     NSURL *url = [NSURL URLWithString:urlString];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {

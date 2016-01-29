@@ -21,9 +21,12 @@
 @property (nonatomic,copy) NSString* card_exp_month;
 @property (nonatomic,assign) NSInteger card_exp_year;
 
+@property (nonatomic, copy) NSString* token_id;
+
+@property (nonatomic, assign) BOOL two_click;
 @property (nonatomic,assign) BOOL secure;
 
--(NSString*) getParamUrl;
+-(NSString*) getParamUrl:(BOOL)isTwoClick;
 -(NSString*) getBankParam;
 
 

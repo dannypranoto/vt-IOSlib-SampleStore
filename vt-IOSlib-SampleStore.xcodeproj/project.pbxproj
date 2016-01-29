@@ -74,7 +74,6 @@
 		ED00F10E1C5874D200D70CCC /* VTCustomerDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VTCustomerDetails.m; path = lib/VTCustomerDetails.m; sourceTree = "<group>"; };
 		ED00F10F1C5874D200D70CCC /* VTDirect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VTDirect.h; path = lib/VTDirect.h; sourceTree = "<group>"; };
 		ED00F1101C5874D200D70CCC /* VTDirect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VTDirect.m; path = lib/VTDirect.m; sourceTree = "<group>"; };
-		ED00F1111C5874D200D70CCC /* VTiOSAPI-BridgingHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "VTiOSAPI-BridgingHeader.h"; path = "lib/VTiOSAPI-BridgingHeader.h"; sourceTree = "<group>"; };
 		ED00F1121C5874D200D70CCC /* VTiOSAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VTiOSAPI.h; path = lib/VTiOSAPI.h; sourceTree = "<group>"; };
 		ED00F1131C5874D200D70CCC /* VTiOSAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VTiOSAPI.m; path = lib/VTiOSAPI.m; sourceTree = "<group>"; };
 		ED00F1141C5874D200D70CCC /* VTItemDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VTItemDetails.h; path = lib/VTItemDetails.h; sourceTree = "<group>"; };
@@ -180,7 +179,6 @@
 				ED00F10E1C5874D200D70CCC /* VTCustomerDetails.m */,
 				ED00F10F1C5874D200D70CCC /* VTDirect.h */,
 				ED00F1101C5874D200D70CCC /* VTDirect.m */,
-				ED00F1111C5874D200D70CCC /* VTiOSAPI-BridgingHeader.h */,
 				ED00F1121C5874D200D70CCC /* VTiOSAPI.h */,
 				ED00F1131C5874D200D70CCC /* VTiOSAPI.m */,
 				ED00F1141C5874D200D70CCC /* VTItemDetails.h */,
